@@ -10,5 +10,18 @@
 	and necessary but couldn't apply it because of the data
 	
 
-	
+
+login curl 
+curl --location --request POST 'http://localhost:8080/login' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=3C56D1871AE62E76672BE8177BBB2F9C' \
+--data-raw '{
+    "username":"admin",
+    "password": "password"
+}'
+
+search curl 
+curl --location --request GET 'http://localhost:8080/account/2/statement?amountFrom=190&amountTo=800&dateFrom=22.06.2012&dateTo=22.06.2020' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2MzAxMDU5MSwiaWF0IjoxNjYzMDEwMjkxfQ.skISbKVbKDUz0zjxyTc4nQ7pMcMmvffhvG56E3eGkNstWswKVSr8rE3rgrafXiWFFayantG6CTtucJ5KzNbbBg' \
+--header 'Cookie: JSESSIONID=4A8D206A19BE27A2FE01DBAB20D17DB6'	
 	
